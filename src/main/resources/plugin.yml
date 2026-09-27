@@ -1,0 +1,34 @@
+name: Ultras_settings
+version: v1
+main: me.uc_hussein.ultrassettings.UltrasSettingsPlugin
+api-version: '1.21'
+author: UC_Hussein
+description: Ultras_settings — a premium Settings GUI frontend that controls Ultras_TPA through its own commands
+softdepend: [Ultras_TPA]
+
+commands:
+  setting:
+    description: Open your Settings GUI, or reset your own settings with "rest"
+    aliases: [settings]
+  setting_admin:
+    description: Administrative settings management
+
+permissions:
+  ultras.settings.use:
+    description: Use /setting and /settings
+    default: true
+  ultras.settings.admin:
+    description: Base permission for /setting_admin
+    default: op
+  ultras.settings.admin.reload:
+    description: /setting_admin reload
+    default: op
+  ultras.settings.admin.open:
+    description: /setting_admin open <gui>
+    default: op
+  ultras.settings.admin.player:
+    description: /setting_admin <player> — view/manage another player's settings
+    default: op
+  ultras.settings.admin.reset:
+    description: /setting_admin rest <player>
+    default: op

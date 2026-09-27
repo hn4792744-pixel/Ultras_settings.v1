@@ -1,0 +1,144 @@
+# Example secondary settings page — demonstrates adding a new GUI purely via YAML.
+# Open it with: /setting_admin open setting.gui2
+title: <gradient:#8fd3ff:#84fab0><bold>ULTRAS</bold></gradient> <dark_gray>|</dark_gray> <white>Settings — Page 3
+size: 27
+close-on-action: false
+allow-player-items: false
+sound-open: gui-open
+decoration:
+  material: GRAY_STAINED_GLASS_PANE
+  name: ' '
+  slots:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 17
+  - 18
+  - 19
+  - 20
+  - 21
+  - 23
+  - 24
+  - 25
+  - 26
+buttons:
+  soon_1:
+    enabled: true
+    slot: 10
+    type: COMING_SOON
+    material: GRAY_DYE
+    name: <dark_gray><strikethrough>COSMETICS</strikethrough>
+    lore:
+    - <gray>Planned for a future update.
+    sound: BLOCK_NOTE_BLOCK_BASS
+    volume: 0.4
+    pitch: 0.6
+    glow: false
+    custom-model-data: 0
+    message: <gray>Coming soon.
+  soon_2:
+    enabled: true
+    slot: 11
+    type: COMING_SOON
+    material: GRAY_DYE
+    name: <dark_gray><strikethrough>PETS</strikethrough>
+    lore:
+    - <gray>Planned for a future update.
+    sound: BLOCK_NOTE_BLOCK_BASS
+    volume: 0.4
+    pitch: 0.6
+    glow: false
+    custom-model-data: 0
+    message: <gray>Coming soon.
+  soon_3:
+    enabled: true
+    slot: 12
+    type: COMING_SOON
+    material: GRAY_DYE
+    name: <dark_gray><strikethrough>PARTICLES</strikethrough>
+    lore:
+    - <gray>Planned for a future update.
+    sound: BLOCK_NOTE_BLOCK_BASS
+    volume: 0.4
+    pitch: 0.6
+    glow: false
+    custom-model-data: 0
+    message: <gray>Coming soon.
+  soon_4:
+    enabled: true
+    slot: 13
+    type: COMING_SOON
+    material: GRAY_DYE
+    name: <dark_gray><strikethrough>TAGS</strikethrough>
+    lore:
+    - <gray>Planned for a future update.
+    sound: BLOCK_NOTE_BLOCK_BASS
+    volume: 0.4
+    pitch: 0.6
+    glow: false
+    custom-model-data: 0
+    message: <gray>Coming soon.
+  soon_5:
+    enabled: true
+    slot: 14
+    type: COMING_SOON
+    material: GRAY_DYE
+    name: <dark_gray><strikethrough>STATS</strikethrough>
+    lore:
+    - <gray>Planned for a future update.
+    sound: BLOCK_NOTE_BLOCK_BASS
+    volume: 0.4
+    pitch: 0.6
+    glow: false
+    custom-model-data: 0
+    message: <gray>Coming soon.
+  soon_6:
+    enabled: true
+    slot: 15
+    type: COMING_SOON
+    material: GRAY_DYE
+    name: <dark_gray><strikethrough>REWARDS</strikethrough>
+    lore:
+    - <gray>Planned for a future update.
+    sound: BLOCK_NOTE_BLOCK_BASS
+    volume: 0.4
+    pitch: 0.6
+    glow: false
+    custom-model-data: 0
+    message: <gray>Coming soon.
+  soon_7:
+    enabled: true
+    slot: 16
+    type: COMING_SOON
+    material: GRAY_DYE
+    name: <dark_gray><strikethrough>MISC</strikethrough>
+    lore:
+    - <gray>Planned for a future update.
+    sound: BLOCK_NOTE_BLOCK_BASS
+    volume: 0.4
+    pitch: 0.6
+    glow: false
+    custom-model-data: 0
+    message: <gray>Coming soon.
+  back:
+    enabled: true
+    slot: 22
+    type: ACTION
+    material: ARROW
+    name: <white>« BACK
+    lore:
+    - <gray>Return to the main menu
+    sound: UI_BUTTON_CLICK
+    volume: 0.5
+    pitch: 1.0
+    glow: false
+    custom-model-data: 0
+    action: OPEN_GUI
+    target-gui: setting.gui

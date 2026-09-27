@@ -1,0 +1,108 @@
+# Per-player block/unblock screen, opened by clicking a head in blocklist.gui.yml.
+# Placeholders: %player% %uuid% %online% %status%
+title: <gradient:#ff3b30:#ff6a00><bold>ULTRAS</bold></gradient> <dark_gray>|</dark_gray> <white>Manage Player
+size: 27
+close-on-action: false
+allow-player-items: false
+sound-open: gui-open
+player-head:
+  slot: 13
+  name: <white>%player%
+  lore:
+  - '<gray>UUID: <dark_gray>%uuid%'
+  - '<gray>Online: <white>%online%'
+  - '<gray>Status: %status%'
+decoration:
+  material: GRAY_STAINED_GLASS_PANE
+  name: ' '
+  slots:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 17
+  - 18
+  - 19
+  - 20
+  - 21
+  - 22
+  - 23
+  - 24
+  - 25
+  - 26
+buttons:
+  block:
+    enabled: true
+    slot: 11
+    type: BLOCK_STATUS
+    active:
+      material: RED_DYE
+      name: <red><bold>BLOCK</bold>
+      lore:
+      - <gray>Prevent %player% from
+      - <gray>sending you requests
+      - ''
+      - <white>Click to block
+      sound: block
+      volume: 0.5
+      pitch: 1.0
+      glow: false
+      custom-model-data: 0
+    inactive:
+      material: GRAY_DYE
+      name: <dark_gray><strikethrough>BLOCK</strikethrough>
+      lore:
+      - <gray>%player% is already blocked.
+      sound: error
+      volume: 0.4
+      pitch: 0.6
+      glow: false
+      custom-model-data: 0
+  unblock:
+    enabled: true
+    slot: 15
+    type: UNBLOCK_STATUS
+    active:
+      material: LIME_DYE
+      name: <green><bold>UNBLOCK</bold>
+      lore:
+      - <gray>Allow %player% to send
+      - <gray>you requests again
+      - ''
+      - <white>Click to unblock
+      sound: unblock
+      volume: 0.5
+      pitch: 1.0
+      glow: false
+      custom-model-data: 0
+    inactive:
+      material: GRAY_DYE
+      name: <dark_gray><strikethrough>UNBLOCK</strikethrough>
+      lore:
+      - <gray>%player% isn't blocked.
+      sound: error
+      volume: 0.4
+      pitch: 0.6
+      glow: false
+      custom-model-data: 0
+  back:
+    enabled: true
+    slot: 22
+    type: ACTION
+    material: ARROW
+    name: <white>« BACK
+    lore:
+    - <gray>Return to the Block List
+    sound: UI_BUTTON_CLICK
+    volume: 0.5
+    pitch: 1.0
+    glow: false
+    custom-model-data: 0
+    action: OPEN_GUI
+    target-gui: blocklist.gui

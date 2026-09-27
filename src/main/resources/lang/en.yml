@@ -1,0 +1,34 @@
+# All Ultras_settings feedback/system messages live here. GUI titles, button
+# names and lore live in the gui/*.yml files themselves (see README).
+# Placeholders where noted: %player% %target% %gui% %usage%
+
+prefix: "<gradient:#8fd3ff:#84fab0>Ultras</gradient> <dark_gray>|</dark_gray> "
+
+general:
+  no-permission: "<red>You don't have permission to do that."
+  player-only: "<red>Only players can use this command."
+  invalid-usage: "<red>Usage: <white>%usage%"
+  player-not-found: "<red>Player not found."
+  reload-success: "<green>Ultras_settings reloaded — config, language and every GUI file."
+  gui-not-found: "<red>No GUI file named <white>%gui%<red> was found."
+
+integration:
+  not-installed: "<red>Ultras_TPA is not installed/enabled — this button has no effect."
+  disabled: "<red>The Ultras_TPA integration is disabled in config.yml."
+
+settings:
+  reset-success: "<green>Your settings have been reset to the defaults."
+  reset-success-admin: "<green>Reset <white>%target%<green>'s settings to the defaults."
+
+admin:
+  editing-header: "<gold>Editing settings for <white>%target%"
+  target-offline: "<red>%target% must be online for admin changes to take effect."
+
+buttons:
+  coming-soon: "<gray>This feature isn't available yet."
+
+block:
+  already-blocked: "<red>%target% is already blocked."
+  not-blocked: "<red>%target% isn't blocked."
+  status-blocked: "<red><bold>BLOCKED</bold>"
+  status-not-blocked: "<green>NOT BLOCKED"

@@ -1,0 +1,112 @@
+# =========================================================
+# Ultras_settings v1
+# نظام واجهات الإعدادات الفخم — يتحكم في Ultras_TPA عن طريق تنفيذ أوامره فقط
+# =========================================================
+
+# لغة الإضافة: en = إنجليزي، ar = عربي
+language: en
+
+# تفعيل رسائل تصحيح إضافية في الكونسول (GUI Open/Click, Command Execute, Setting Change...)
+# لا تُطبع رسائل عشوائية، فقط الأحداث المهمة المذكورة في التوثيق
+debug: false
+
+# ---------------------------------------------------------
+# التخزين — بيانات Ultras_settings الخاصة (ليست إعدادات TPA؛ تلك تعيش داخل Ultras_TPA نفسه)
+# مصمم لإعدادات مستقبلية غير موجودة بعد (أزرار COMING SOON لاحقًا)، Lazy Loading بالكامل
+# ---------------------------------------------------------
+storage:
+  unload-on-quit: true        # تفريغ بيانات اللاعب من الذاكرة بعد حفظها عند خروجه (Lazy Loading حقيقي)
+  save-async: true            # الحفظ يتم دائمًا خارج Main Thread
+
+# ---------------------------------------------------------
+# القيم الافتراضية لإعدادات TPA — تُستخدم فقط عند /setting rest أو /setting_admin rest
+# (Ultras_settings لا يخزّن هذه القيم بنفسه، فقط يقارن بها الحالة الحقيقية من Ultras_TPA)
+# ---------------------------------------------------------
+defaults:
+  tpa: true
+  tpahere: true
+  tpaall: true
+  auto: false
+  gui: true
+
+# ---------------------------------------------------------
+# التكامل مع Ultras_TPA
+# ---------------------------------------------------------
+integration:
+  ultras-tpa:
+    enabled: true                       # تعطيل هذا يجعل Ultras_settings يتصرف كأن Ultras_TPA غير مثبت
+    plugin-name: "ULTRAS_TPA"           # الاسم بالضبط كما يظهر في plugin.yml الخاص بـ Ultras_TPA
+    data-file: "player-data.yml"        # الملف الذي يقرأ منه Ultras_settings حالة كل لاعب (قراءة فقط، لا كتابة مباشرة أبدًا)
+    # الأوامر التي ينفذها كل زر. %target% تُستبدل باسم اللاعب عند الحاجة (غير مستخدمة هنا لأن هذه أوامر ذاتية).
+    commands:
+      toggle: "ultras_tpa:tpa toggle"
+      togglehere: "ultras_tpa:tpa togglehere"
+      toggleall: "ultras_tpa:tpa toggleall"
+      auto: "ultras_tpa:tpa auto"
+      gui: "ultras_tpa:tpa gui"
+      block: "ultras_tpa:tpa block %target%"
+      unblock: "ultras_tpa:tpa unblock %target%"
+    # مفاتيح القراءة داخل player-data.yml لكل لاعب (players.<uuid>.<key>) — يجب أن تطابق Ultras_TPA فعليًا
+    data-keys:
+      tpa: "tpa-enabled"
+      tpahere: "tpahere-enabled"
+      tpaall: "tpaall-enabled"
+      auto: "auto-accept"
+      blocked-list: "blocked"
+    # ملاحظة مهمة: زر "gui" (تفعيل/تعطيل GUI الخاص بـ TPA نفسه) غير مخزّن في player-data.yml حاليًا
+    # في Ultras_TPA — فهذا الزر ينفذ الأمر دائمًا لكن حالته المعروضة تبقى تقديرية (راجع README).
+
+# ---------------------------------------------------------
+# ما يُعرض عند وجود رأس لاعب (Blocklist وBlock GUI)
+# ---------------------------------------------------------
+player-info:
+  show-name: true
+  show-status: true          # BLOCKED / NOT BLOCKED
+  show-uuid: false
+  show-online: true
+  show-block-status: true
+
+# ---------------------------------------------------------
+# الصفحات — يُستخدم كاحتياطي فقط إذا لم يحدد ملف الـ GUI player-slots الخاصة به
+# ---------------------------------------------------------
+pagination:
+  default-per-page: 7
+
+# ---------------------------------------------------------
+# أصوات عامة للنظام (التنقل بين الصفحات، فتح الواجهة، الأخطاء...)
+# أصوات كل زر (ON/OFF) تكون داخل ملف الـ GUI الخاص به
+# ---------------------------------------------------------
+sounds:
+  enabled: true
+  gui-open:
+    sound: BLOCK_CHEST_OPEN
+    volume: 0.6
+    pitch: 1.0
+  back:
+    sound: UI_BUTTON_CLICK
+    volume: 0.5
+    pitch: 1.0
+  next-page:
+    sound: ITEM_BOOK_PAGE_TURN
+    volume: 0.6
+    pitch: 1.2
+  previous-page:
+    sound: ITEM_BOOK_PAGE_TURN
+    volume: 0.6
+    pitch: 0.8
+  reset:
+    sound: ENTITY_PLAYER_LEVELUP
+    volume: 0.5
+    pitch: 1.0
+  error:
+    sound: BLOCK_NOTE_BLOCK_BASS
+    volume: 0.5
+    pitch: 0.6
+  block:
+    sound: BLOCK_ANVIL_LAND
+    volume: 0.4
+    pitch: 1.0
+  unblock:
+    sound: ENTITY_PLAYER_LEVELUP
+    volume: 0.4
+    pitch: 1.0

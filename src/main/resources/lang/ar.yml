@@ -1,0 +1,33 @@
+# كل رسائل Ultras_settings هنا. عناوين الواجهات وأسماء الأزرار وlore موجودة داخل ملفات gui/*.yml.
+# المتغيرات: %player% %target% %gui% %usage%
+
+prefix: "<gradient:#8fd3ff:#84fab0>Ultras</gradient> <dark_gray>|</dark_gray> "
+
+general:
+  no-permission: "<red>ليس لديك صلاحية لفعل ذلك."
+  player-only: "<red>هذا الأمر متاح للاعبين فقط."
+  invalid-usage: "<red>الاستخدام: <white>%usage%"
+  player-not-found: "<red>اللاعب غير موجود."
+  reload-success: "<green>تم إعادة تحميل Ultras_settings — الإعدادات واللغة وكل ملفات الواجهات."
+  gui-not-found: "<red>لا يوجد ملف واجهة باسم <white>%gui%<red>."
+
+integration:
+  not-installed: "<red>Ultras_TPA غير مثبت أو غير مفعّل — هذا الزر بدون تأثير."
+  disabled: "<red>تكامل Ultras_TPA معطل من config.yml."
+
+settings:
+  reset-success: "<green>تم إعادة إعداداتك إلى الوضع الافتراضي."
+  reset-success-admin: "<green>تم إعادة إعدادات <white>%target%<green> إلى الوضع الافتراضي."
+
+admin:
+  editing-header: "<gold>تعديل إعدادات <white>%target%"
+  target-offline: "<red>يجب أن يكون %target% متصلًا لتنفيذ تغييرات الإدارة."
+
+buttons:
+  coming-soon: "<gray>هذه الميزة غير متاحة بعد."
+
+block:
+  already-blocked: "<red>%target% محظور مسبقًا."
+  not-blocked: "<red>%target% غير محظور."
+  status-blocked: "<red><bold>محظور</bold>"
+  status-not-blocked: "<green>غير محظور"

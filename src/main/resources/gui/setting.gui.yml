@@ -1,0 +1,567 @@
+# Main Settings GUI — 4 rows of 7 buttons (spec section 6), fully config-driven.
+# See README "Editing GUIs" for the full button schema (type: TOGGLE / ACTION / COMING_SOON).
+title: <gradient:#8fd3ff:#84fab0><bold>ULTRAS</bold></gradient> <dark_gray>|</dark_gray> <white>Settings
+size: 54
+close-on-action: false
+allow-player-items: false
+sound-open: gui-open
+decoration:
+  material: GRAY_STAINED_GLASS_PANE
+  name: ' '
+  slots:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 17
+  - 18
+  - 26
+  - 27
+  - 35
+  - 36
+  - 44
+  - 45
+  - 46
+  - 47
+  - 48
+  - 50
+  - 51
+  - 52
+  - 53
+buttons:
+  tpa:
+    enabled: true
+    slot: 10
+    type: TOGGLE
+    toggle-source: tpa
+    'on':
+      material: LIME_DYE
+      name: '<gradient:#ff3b30:#ff6a00>ᴛᴘᴀ ʀᴇǫᴜᴇsᴛs</gradient>
+
+        <green>ON'
+      lore:
+      - <gray>Receive /tpa requests
+      - ''
+      - <white>Click to toggle
+      sound: BLOCK_NOTE_BLOCK_PLING
+      volume: 0.6
+      pitch: 1.2
+      glow: true
+      custom-model-data: 0
+      command: ultras_tpa:tpa toggle
+      message: ''
+    'off':
+      material: GRAY_DYE
+      name: '<gradient:#ff3b30:#ff6a00>ᴛᴘᴀ ʀᴇǫᴜᴇsᴛs</gradient>
+
+        <red>OFF'
+      lore:
+      - <gray>Receive /tpa requests
+      - ''
+      - <white>Click to toggle
+      sound: BLOCK_NOTE_BLOCK_BASS
+      volume: 0.5
+      pitch: 0.8
+      glow: false
+      custom-model-data: 0
+      command: ultras_tpa:tpa toggle
+      message: ''
+  tpahere:
+    enabled: true
+    slot: 11
+    type: TOGGLE
+    toggle-source: tpahere
+    'on':
+      material: LIME_DYE
+      name: '<gradient:#ff3b30:#ff6a00>ᴛᴘᴀʜᴇʀᴇ ʀᴇǫᴜᴇsᴛs</gradient>
+
+        <green>ON'
+      lore:
+      - <gray>Receive /tpahere requests
+      - ''
+      - <white>Click to toggle
+      sound: BLOCK_NOTE_BLOCK_PLING
+      volume: 0.6
+      pitch: 1.2
+      glow: true
+      custom-model-data: 0
+      command: ultras_tpa:tpa togglehere
+      message: ''
+    'off':
+      material: GRAY_DYE
+      name: '<gradient:#ff3b30:#ff6a00>ᴛᴘᴀʜᴇʀᴇ ʀᴇǫᴜᴇsᴛs</gradient>
+
+        <red>OFF'
+      lore:
+      - <gray>Receive /tpahere requests
+      - ''
+      - <white>Click to toggle
+      sound: BLOCK_NOTE_BLOCK_BASS
+      volume: 0.5
+      pitch: 0.8
+      glow: false
+      custom-model-data: 0
+      command: ultras_tpa:tpa togglehere
+      message: ''
+  tpaall:
+    enabled: true
+    slot: 12
+    type: TOGGLE
+    toggle-source: tpaall
+    'on':
+      material: LIME_DYE
+      name: '<gradient:#ff3b30:#ff6a00>ᴛᴘᴀ ᴀʟʟ</gradient>
+
+        <green>ON'
+      lore:
+      - <gray>Receive /tpa all requests
+      - ''
+      - <white>Click to toggle
+      sound: BLOCK_NOTE_BLOCK_PLING
+      volume: 0.6
+      pitch: 1.2
+      glow: true
+      custom-model-data: 0
+      command: ultras_tpa:tpa toggleall
+      message: ''
+    'off':
+      material: GRAY_DYE
+      name: '<gradient:#ff3b30:#ff6a00>ᴛᴘᴀ ᴀʟʟ</gradient>
+
+        <red>OFF'
+      lore:
+      - <gray>Receive /tpa all requests
+      - ''
+      - <white>Click to toggle
+      sound: BLOCK_NOTE_BLOCK_BASS
+      volume: 0.5
+      pitch: 0.8
+      glow: false
+      custom-model-data: 0
+      command: ultras_tpa:tpa toggleall
+      message: ''
+  auto:
+    enabled: true
+    slot: 13
+    type: TOGGLE
+    toggle-source: auto
+    'on':
+      material: EMERALD
+      name: '<gradient:#8fd3ff:#84fab0>ᴀᴜᴛᴏ ᴀᴄᴄᴇᴘᴛ</gradient>
+
+        <green>ON'
+      lore:
+      - <gray>Automatically accept
+      - <gray>incoming requests
+      - ''
+      - <white>Click to toggle
+      sound: ENTITY_PLAYER_LEVELUP
+      volume: 0.6
+      pitch: 1.2
+      glow: true
+      custom-model-data: 0
+      command: ultras_tpa:tpa auto
+      message: ''
+    'off':
+      material: COAL
+      name: '<gradient:#8fd3ff:#84fab0>ᴀᴜᴛᴏ ᴀᴄᴄᴇᴘᴛ</gradient>
+
+        <red>OFF'
+      lore:
+      - <gray>Automatically accept
+      - <gray>incoming requests
+      - ''
+      - <white>Click to toggle
+      sound: BLOCK_NOTE_BLOCK_BASS
+      volume: 0.5
+      pitch: 0.8
+      glow: false
+      custom-model-data: 0
+      command: ultras_tpa:tpa auto
+      message: ''
+  gui:
+    enabled: true
+    slot: 14
+    type: ACTION
+    material: CYAN_DYE
+    name: <gradient:#8fd3ff:#84fab0>ᴛᴘᴀ ɢᴜɪ</gradient>
+    lore:
+    - <gray>Open the TPA player-picker
+    - <gray>GUI from Ultras_TPA
+    - ''
+    - <white>Click to open
+    sound: UI_BUTTON_CLICK
+    volume: 0.5
+    pitch: 1.0
+    glow: false
+    custom-model-data: 0
+    action: PLAYER_COMMAND
+    command: ultras_tpa:tpa gui
+  blocklist:
+    enabled: true
+    slot: 15
+    type: ACTION
+    material: BARRIER
+    name: <gradient:#ff3b30:#ff6a00>ʙʟᴏᴄᴋ ʟɪsᴛ</gradient>
+    lore:
+    - <gray>Manage which players
+    - <gray>can send you requests
+    - ''
+    - <white>Click to open
+    sound: UI_BUTTON_CLICK
+    volume: 0.5
+    pitch: 1.0
+    glow: false
+    custom-model-data: 0
+    action: OPEN_GUI
+    target-gui: blocklist.gui
+  soon_1:
+    enabled: true
+    slot: 16
+    type: COMING_SOON
+    material: GRAY_DYE
+    name: <dark_gray><strikethrough>COMING SOON</strikethrough>
+    lore:
+    - <gray>This feature is planned
+    - <gray>for a future update.
+    sound: BLOCK_NOTE_BLOCK_BASS
+    volume: 0.4
+    pitch: 0.6
+    glow: false
+    custom-model-data: 0
+    message: <gray>Coming soon.
+  soon_2:
+    enabled: true
+    slot: 19
+    type: COMING_SOON
+    material: GRAY_DYE
+    name: <dark_gray><strikethrough>COMING SOON</strikethrough>
+    lore:
+    - <gray>This feature is planned
+    - <gray>for a future update.
+    sound: BLOCK_NOTE_BLOCK_BASS
+    volume: 0.4
+    pitch: 0.6
+    glow: false
+    custom-model-data: 0
+    message: <gray>Coming soon.
+  soon_3:
+    enabled: true
+    slot: 20
+    type: COMING_SOON
+    material: GRAY_DYE
+    name: <dark_gray><strikethrough>COMING SOON</strikethrough>
+    lore:
+    - <gray>This feature is planned
+    - <gray>for a future update.
+    sound: BLOCK_NOTE_BLOCK_BASS
+    volume: 0.4
+    pitch: 0.6
+    glow: false
+    custom-model-data: 0
+    message: <gray>Coming soon.
+  soon_4:
+    enabled: true
+    slot: 21
+    type: COMING_SOON
+    material: GRAY_DYE
+    name: <dark_gray><strikethrough>COMING SOON</strikethrough>
+    lore:
+    - <gray>This feature is planned
+    - <gray>for a future update.
+    sound: BLOCK_NOTE_BLOCK_BASS
+    volume: 0.4
+    pitch: 0.6
+    glow: false
+    custom-model-data: 0
+    message: <gray>Coming soon.
+  soon_5:
+    enabled: true
+    slot: 22
+    type: COMING_SOON
+    material: GRAY_DYE
+    name: <dark_gray><strikethrough>COMING SOON</strikethrough>
+    lore:
+    - <gray>This feature is planned
+    - <gray>for a future update.
+    sound: BLOCK_NOTE_BLOCK_BASS
+    volume: 0.4
+    pitch: 0.6
+    glow: false
+    custom-model-data: 0
+    message: <gray>Coming soon.
+  soon_6:
+    enabled: true
+    slot: 23
+    type: COMING_SOON
+    material: GRAY_DYE
+    name: <dark_gray><strikethrough>COMING SOON</strikethrough>
+    lore:
+    - <gray>This feature is planned
+    - <gray>for a future update.
+    sound: BLOCK_NOTE_BLOCK_BASS
+    volume: 0.4
+    pitch: 0.6
+    glow: false
+    custom-model-data: 0
+    message: <gray>Coming soon.
+  soon_7:
+    enabled: true
+    slot: 24
+    type: COMING_SOON
+    material: GRAY_DYE
+    name: <dark_gray><strikethrough>COMING SOON</strikethrough>
+    lore:
+    - <gray>This feature is planned
+    - <gray>for a future update.
+    sound: BLOCK_NOTE_BLOCK_BASS
+    volume: 0.4
+    pitch: 0.6
+    glow: false
+    custom-model-data: 0
+    message: <gray>Coming soon.
+  soon_8:
+    enabled: true
+    slot: 25
+    type: COMING_SOON
+    material: GRAY_DYE
+    name: <dark_gray><strikethrough>COMING SOON</strikethrough>
+    lore:
+    - <gray>This feature is planned
+    - <gray>for a future update.
+    sound: BLOCK_NOTE_BLOCK_BASS
+    volume: 0.4
+    pitch: 0.6
+    glow: false
+    custom-model-data: 0
+    message: <gray>Coming soon.
+  soon_9:
+    enabled: true
+    slot: 28
+    type: COMING_SOON
+    material: GRAY_DYE
+    name: <dark_gray><strikethrough>COMING SOON</strikethrough>
+    lore:
+    - <gray>This feature is planned
+    - <gray>for a future update.
+    sound: BLOCK_NOTE_BLOCK_BASS
+    volume: 0.4
+    pitch: 0.6
+    glow: false
+    custom-model-data: 0
+    message: <gray>Coming soon.
+  soon_10:
+    enabled: true
+    slot: 29
+    type: COMING_SOON
+    material: GRAY_DYE
+    name: <dark_gray><strikethrough>COMING SOON</strikethrough>
+    lore:
+    - <gray>This feature is planned
+    - <gray>for a future update.
+    sound: BLOCK_NOTE_BLOCK_BASS
+    volume: 0.4
+    pitch: 0.6
+    glow: false
+    custom-model-data: 0
+    message: <gray>Coming soon.
+  soon_11:
+    enabled: true
+    slot: 30
+    type: COMING_SOON
+    material: GRAY_DYE
+    name: <dark_gray><strikethrough>COMING SOON</strikethrough>
+    lore:
+    - <gray>This feature is planned
+    - <gray>for a future update.
+    sound: BLOCK_NOTE_BLOCK_BASS
+    volume: 0.4
+    pitch: 0.6
+    glow: false
+    custom-model-data: 0
+    message: <gray>Coming soon.
+  soon_12:
+    enabled: true
+    slot: 31
+    type: COMING_SOON
+    material: GRAY_DYE
+    name: <dark_gray><strikethrough>COMING SOON</strikethrough>
+    lore:
+    - <gray>This feature is planned
+    - <gray>for a future update.
+    sound: BLOCK_NOTE_BLOCK_BASS
+    volume: 0.4
+    pitch: 0.6
+    glow: false
+    custom-model-data: 0
+    message: <gray>Coming soon.
+  soon_13:
+    enabled: true
+    slot: 32
+    type: COMING_SOON
+    material: GRAY_DYE
+    name: <dark_gray><strikethrough>COMING SOON</strikethrough>
+    lore:
+    - <gray>This feature is planned
+    - <gray>for a future update.
+    sound: BLOCK_NOTE_BLOCK_BASS
+    volume: 0.4
+    pitch: 0.6
+    glow: false
+    custom-model-data: 0
+    message: <gray>Coming soon.
+  soon_14:
+    enabled: true
+    slot: 33
+    type: COMING_SOON
+    material: GRAY_DYE
+    name: <dark_gray><strikethrough>COMING SOON</strikethrough>
+    lore:
+    - <gray>This feature is planned
+    - <gray>for a future update.
+    sound: BLOCK_NOTE_BLOCK_BASS
+    volume: 0.4
+    pitch: 0.6
+    glow: false
+    custom-model-data: 0
+    message: <gray>Coming soon.
+  soon_15:
+    enabled: true
+    slot: 34
+    type: COMING_SOON
+    material: GRAY_DYE
+    name: <dark_gray><strikethrough>COMING SOON</strikethrough>
+    lore:
+    - <gray>This feature is planned
+    - <gray>for a future update.
+    sound: BLOCK_NOTE_BLOCK_BASS
+    volume: 0.4
+    pitch: 0.6
+    glow: false
+    custom-model-data: 0
+    message: <gray>Coming soon.
+  soon_16:
+    enabled: true
+    slot: 37
+    type: COMING_SOON
+    material: GRAY_DYE
+    name: <dark_gray><strikethrough>COMING SOON</strikethrough>
+    lore:
+    - <gray>This feature is planned
+    - <gray>for a future update.
+    sound: BLOCK_NOTE_BLOCK_BASS
+    volume: 0.4
+    pitch: 0.6
+    glow: false
+    custom-model-data: 0
+    message: <gray>Coming soon.
+  soon_17:
+    enabled: true
+    slot: 38
+    type: COMING_SOON
+    material: GRAY_DYE
+    name: <dark_gray><strikethrough>COMING SOON</strikethrough>
+    lore:
+    - <gray>This feature is planned
+    - <gray>for a future update.
+    sound: BLOCK_NOTE_BLOCK_BASS
+    volume: 0.4
+    pitch: 0.6
+    glow: false
+    custom-model-data: 0
+    message: <gray>Coming soon.
+  soon_18:
+    enabled: true
+    slot: 39
+    type: COMING_SOON
+    material: GRAY_DYE
+    name: <dark_gray><strikethrough>COMING SOON</strikethrough>
+    lore:
+    - <gray>This feature is planned
+    - <gray>for a future update.
+    sound: BLOCK_NOTE_BLOCK_BASS
+    volume: 0.4
+    pitch: 0.6
+    glow: false
+    custom-model-data: 0
+    message: <gray>Coming soon.
+  soon_19:
+    enabled: true
+    slot: 40
+    type: COMING_SOON
+    material: GRAY_DYE
+    name: <dark_gray><strikethrough>COMING SOON</strikethrough>
+    lore:
+    - <gray>This feature is planned
+    - <gray>for a future update.
+    sound: BLOCK_NOTE_BLOCK_BASS
+    volume: 0.4
+    pitch: 0.6
+    glow: false
+    custom-model-data: 0
+    message: <gray>Coming soon.
+  soon_20:
+    enabled: true
+    slot: 41
+    type: COMING_SOON
+    material: GRAY_DYE
+    name: <dark_gray><strikethrough>COMING SOON</strikethrough>
+    lore:
+    - <gray>This feature is planned
+    - <gray>for a future update.
+    sound: BLOCK_NOTE_BLOCK_BASS
+    volume: 0.4
+    pitch: 0.6
+    glow: false
+    custom-model-data: 0
+    message: <gray>Coming soon.
+  soon_21:
+    enabled: true
+    slot: 42
+    type: COMING_SOON
+    material: GRAY_DYE
+    name: <dark_gray><strikethrough>COMING SOON</strikethrough>
+    lore:
+    - <gray>This feature is planned
+    - <gray>for a future update.
+    sound: BLOCK_NOTE_BLOCK_BASS
+    volume: 0.4
+    pitch: 0.6
+    glow: false
+    custom-model-data: 0
+    message: <gray>Coming soon.
+  soon_22:
+    enabled: true
+    slot: 43
+    type: COMING_SOON
+    material: GRAY_DYE
+    name: <dark_gray><strikethrough>COMING SOON</strikethrough>
+    lore:
+    - <gray>This feature is planned
+    - <gray>for a future update.
+    sound: BLOCK_NOTE_BLOCK_BASS
+    volume: 0.4
+    pitch: 0.6
+    glow: false
+    custom-model-data: 0
+    message: <gray>Coming soon.
+  close:
+    enabled: true
+    slot: 49
+    type: ACTION
+    material: BARRIER
+    name: <red>CLOSE
+    lore:
+    - <gray>Close this menu
+    sound: UI_BUTTON_CLICK
+    volume: 0.5
+    pitch: 1.0
+    glow: false
+    custom-model-data: 0
+    action: CLOSE
